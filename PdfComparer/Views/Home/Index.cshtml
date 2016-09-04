@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="wrapper">
+    <div id="container">
+        <div id="pdf-container-left" class="pdf-container-wrapper">
+            <div class="pdf-container" id="pdf-left">
+
+            </div>
+            <form id="left-pdf-form" method="post" action="@Url.Action("UploadPdf")" enctype="multipart/form-data">
+                <input type="file" name="pdf-left" class="upload-pdf"/>
+                <button type="submit" class="upload-pdf btn btn-default">Upload pdf</button>
+            </form>
+        </div>
+
+        <div id="pdf-container-right" class="pdf-container-wrapper">
+            <div class="pdf-container" id="pdf-right">
+
+            </div>
+            <form id="right-pdf-form" method="post" action="@Url.Action("UploadPdf")" enctype="multipart/form-data">
+                <input type="file" name="pdf-right" class="upload-pdf"/>
+                <button type="submit" class="upload-pdf btn btn-default">Upload pdf</button>
+            </form>
+        </div>
+
+        <div id="compare-button-container">            
+            <button type="button" id="compare" class="btn btn-primary">Compare</button>
+        </div>
+    </div>
+</div>
